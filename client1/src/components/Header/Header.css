@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #f5d8fa;
+}
+.logo img {
+    width: 5rem;
+  /* height: 100px; */
+  object-fit: contain;
+    margin-right: 10px;
+  }
