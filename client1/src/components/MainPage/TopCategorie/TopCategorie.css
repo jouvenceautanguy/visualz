@@ -1,0 +1,44 @@
+.top-domaine {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+.square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw; /* Utilisation de vw (viewport width) pour la largeur */
+    height: 15vw; /* Utilisation de vw (viewport width) pour la hauteur */
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    margin-right: 2vw; /* Utilisation de vw (viewport width) pour la marge */
+  }
+  
+  .square:hover {
+    border-color: #000;
+  }
+  
+  .square img {
+    width: 10vw; /* Utilisation de vw (viewport width) pour la largeur */
+    height: 10vw; /* Utilisation de vw (viewport width) pour la hauteur */
+  }
+  
+  .square .nom-domaine {
+    font-size: 1.8vw; 
+    margin-top: 2vw; /* Utilisation de vw (viewport width) pour la marge */
+    font-weight: bold;
+  }
+  
+  .square .total-domaine {
+    margin-top: 1vw; /* Utilisation de vw (viewport width) pour la marge */
+    font-size: 1.2vw; /* Utilisation de vw (viewport width) pour la taille de police */
+  }
+
+  .square:last-child {
+    margin-right: 0; /* Supprimez la marge droite du dernier carré */
+  }

@@ -21,6 +21,9 @@ db.connect((err) => {
 const landingRoute = require("./routes/landingRoute");
 landingRoute(server);
 
+const searchBarRoute = require("./routes/searchBarRoute");
+searchBarRoute(server);
+
 // server.use(express.static('../client1/build'))
 // server.get('/*', (_,res) => {
 //   res.sendFile(path.join(__dirname, '../client1/public/index.html'))

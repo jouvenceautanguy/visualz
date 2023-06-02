@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
-import Enceinte from '../../assets/enceinte.jpg'
+import Enceinte from '../../../assets/enceinte.jpg'
 import './Hero.css'
 
 const Hero = () => {

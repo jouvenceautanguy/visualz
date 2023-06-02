@@ -1,0 +1,72 @@
+.all-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.article-preview {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 15vw; /* Utilisation de vw (viewport width) pour la largeur */
+    height: 17vw; /* Utilisation de vw (viewport width) pour la hauteur */
+    border-radius: 1vw;
+   overflow: hidden;
+    cursor: pointer;
+    margin-right: 2vw; 
+    background-color: #F5E7FF;
+    padding: 1vw;
+    margin-bottom: 3px;
+  }
+  
+  .article-preview a {
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+    font-family: Poppins;
+ 
+  }
+  
+  .article-preview img {
+    width:15vw; 
+    border-radius: 1vw;
+
+  }
+  
+  .article-preview h2 {
+
+    font-size: 1.5vw;
+    margin-bottom: 1px;
+    margin-top: 1px;
+
+  }
+  
+  .article-preview p {
+    
+    word-wrap: break-word;
+    font-size: 1vw;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    max-width: 100%; /* ou toute autre valeur souhaitée */
+ 
+  }
+.voirPlus {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+  .voirPlus button{
+    
+        border-radius: 1vw; /* Léger border radius */
+        background-color: #FFD600; /* Fond jaune */
+        padding: 0.5vw 1vw; /* Léger espace autour du texte */
+        font-size: 1vw; /* Font size à 1vw (1% de la largeur de la vue) */
+      font-family: poppins;
+      font-weight: bold;
+      /* outline: none; */
+      cursor:pointer;
+      border: none;
+  }
