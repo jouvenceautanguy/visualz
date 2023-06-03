@@ -1,0 +1,26 @@
+.inscription {
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    border-radius: 3vw;
+}
+.form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.champs  {
+    display: flex;
+    flex-direction: column;
+}

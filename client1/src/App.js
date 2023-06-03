@@ -3,6 +3,7 @@ import './App.css';
 import LandingPage from './components/landingPage';
 import { Routes , Route} from 'react-router-dom';
 import MainPage from './components/mainPage';
+import InscriptionPage from './components/InscriptionPage';
 
 function App() {
  
@@ -11,6 +12,7 @@ function App() {
     <Routes>
     <Route path="/landing" element={<LandingPage />} />
     <Route path="/" element={<MainPage />} />
+    <Route path="/inscription" element={<InscriptionPage />} />
 
     </Routes>
       

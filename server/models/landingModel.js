@@ -7,4 +7,3 @@ Mailing.create = (email, callback) => {
 };
 
 module.exports = Mailing;
-
