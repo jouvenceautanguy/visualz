@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const authModel = require('../models/authModel');
 
 const authController = {};
@@ -18,13 +19,14 @@ authController.login = (req, res) => {
       return res.status(401).json({ message: 'Identifiants invalides' });
     }
 
-    // Générer un token de session et le stocker dans la session de l'utilisateur
-    req.session.token = req.sessionID;
-    req.session.isLoggedIn = true;
-    req.session.userId = user.id;
-    req.session.username = user.nom;
+    // Générer le token JWT
+    const accessToken = jwt.sign(
+      { userId: user._id },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: '24h' }
+    );
 
-    return res.status(200).json({ message: 'Connexion réussie' });
+    return res.status(200).json({ message: 'Connexion réussie', accessToken });
   });
 };
 
