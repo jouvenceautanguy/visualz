@@ -22,7 +22,7 @@ authController.login = (req, res) => {
     // Générer le token JWT
     const accessToken = jwt.sign(
       { userId: user._id },
-      process.env.ACCESS_TOKEN_SECRET,
+      process.env.JWT_KEY,
       { expiresIn: '24h' }
     );
 

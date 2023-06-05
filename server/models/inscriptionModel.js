@@ -22,4 +22,16 @@ Inscription.create = (nom, prenom, email, motDePasse, callback) => {
   });
 };
 
+Inscription.findOne = (email, callback) => {
+  db.query('SELECT * FROM utilisateurs WHERE email = ?', [email], (error, results) => {
+    if (error) {
+      return callback(error, null);
+    }
+    if (results.length === 0) {
+      return callback(null, null); // No user found
+    }
+    return callback(null, results[0]);
+  });
+};
+
 module.exports = Inscription;
