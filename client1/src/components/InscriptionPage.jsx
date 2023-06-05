@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer/Footer.jsx'
 import Inscription from "./inscription/inscription.jsx"
 import HeaderMain from './MainPage/headerMain/headerMain.jsx'
 // import "./inscriptionPage.css"
@@ -7,6 +8,7 @@ function InscriptionPage() {
     <div className='Inscription'>
         <HeaderMain />
         <Inscription />
+        <Footer />
     </div>
   )
 }

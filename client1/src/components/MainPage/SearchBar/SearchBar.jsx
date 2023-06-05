@@ -39,7 +39,7 @@ function SearchBar() {
   
   const handleRechercher = () => {
     // Construire l'URL avec les valeurs sélectionnées
-    const url = `/destination?ville=${villeValue}&categorie=${categorieValue}`;
+    const url = `/visualz?ville=${villeValue}&categorie=${categorieValue}`;
     // Rediriger vers la page de destination
     window.location.href = url;
   };
@@ -76,7 +76,7 @@ function SearchBar() {
           onChange={handleCategorieChange}>
             <option value="">Catégories</option>
           <optgroup label="Animation/Graphic Design">
-            <option value="Motion-design">Drone opérateur</option>
+            <option value="Drone">Drone opérateur</option>
             <option value="Animateur">Animateur 2D/3D</option>
             <option value="Graphiste">Graphiste</option>
           </optgroup>
