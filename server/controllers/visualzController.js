@@ -17,4 +17,17 @@ visualzController.getVisualzs = (req, res) => {
   });
 };
 
+visualzController.createVisualzs = (req, res) => {
+  const { bio, domaine, location, profilImage } = req.body;
+  const id_utilisateur = req.user.userId; // Récupérer l'ID de l'utilisateur connecté à partir du token d'authentification
+
+  visualzModel.create(id_utilisateur, bio, domaine, location, profilImage, (error, visualzId) => {
+    if (error) {
+      console.error(error);
+      return res.status(500).json({ message: 'Erreur lors de la création de la visualz' });
+    }
+    return res.status(200).json({ message: 'Visualz créée avec succès', visualzId });
+  });
+};
+
 module.exports = visualzController;

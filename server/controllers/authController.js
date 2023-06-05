@@ -13,7 +13,8 @@ authController.login = (req, res) => {
       console.error(error);
       return res.status(500).json({ message: 'Erreur lors de la connexion' });
     }
-
+console.log(user)
+console.log()
     // Vérifier si l'utilisateur existe et si le mot de passe correspond
     if (!user || !bcrypt.compareSync(motDePasse, user.mot_de_passe)) {
       return res.status(401).json({ message: 'Identifiants invalides' });

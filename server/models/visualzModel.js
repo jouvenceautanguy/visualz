@@ -38,4 +38,14 @@ visualzModel.getVisualzs = (pays, domaine, callback) => {
   }
 };
 
+visualzModel.create = (id_utilisateur, bio, domaine, location, profilImage, callback) => {
+  const sql = 'INSERT INTO visualzs (id_utilisateur, bio, domaine, location, profilImage) VALUES (?, ?, ?, ?, ?)';
+  db.query(sql, [id_utilisateur, bio, domaine, location, profilImage], (error, results) => {
+    if (error) {
+      return callback(error);
+    }
+    callback(null, results.insertId); // Retourne l'ID de la visualz créée
+  });
+};
+
 module.exports = visualzModel;
