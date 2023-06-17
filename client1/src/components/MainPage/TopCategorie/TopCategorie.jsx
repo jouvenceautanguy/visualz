@@ -34,12 +34,16 @@ function TopCategorie() {
   };
   return (
     <div className="top-domaine">
+     
+      <h3 className='wording'>TOP CATÉGORIES</h3>
+      <div className='categories'>
       {domaines.map(domaine => (
         <div className="square" key={domaine.domaine} onClick={() => handleClick(domaine)}>
-          <div className="nom-domaine">{domaine.domaine}</div>
-          <div className="total-domaine">+ {domaine.total} Profils</div>
+          <div className="nom-domaine">{domaine.domaine.toUpperCase()}</div>
+          <div className="total-domaine">{domaine.total} {domaine.total === 1 ? 'Profil' : 'Profils'}</div>
         </div>
       ))}
+      </div>
     </div>
   );
 }

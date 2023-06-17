@@ -1,7 +1,8 @@
 import React, {useState } from 'react';
 import "./Footer.css"
-import Logo from '../../assets/visualzcolor.png'
-
+import Logo from '../../assets/visualzwhite.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faTwitter,faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
 function Footer() {
 
   const [userInput, setUserInput] = useState('');
@@ -46,12 +47,12 @@ function Footer() {
 
 
   return (
-    <div>
+    <div className='containerFoot'>
       <div className='footer'>
       <div className='reseaux'>
-  <a href='#'>insta<img src=''></img></a>
-  <a href='#'>twitter<img src=''></img></a>
-  <a href='#'>facebook<img src=''></img></a>
+  <a href='#'><FontAwesomeIcon  className="icons" icon={faInstagram} /></a>
+  <a href='#'><FontAwesomeIcon className="icons" icon={faTwitter} /></a>
+  <a href='#'><FontAwesomeIcon className="icons" icon={faFacebookSquare} /></a>
 </div>
 <div className='logo'>
 <a href="#" className='logo-menu'><img src={Logo} alt="Mon Logo"></img></a>
@@ -62,7 +63,7 @@ function Footer() {
         </h5>
 <div className='barre'>
         <form onSubmit={handleSubmit}>
-        <input type="email" name="userInput" placeholder="Adresse mail" value={userInput} onChange={handleInputChange} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+        <input type="email" name="userInput" placeholder="exemple@visualz.com" value={userInput} onChange={handleInputChange} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
         <button type="submit">Envoyer</button>
         <div className="validation-error">{validationError}</div>
         <div className="success-message">{successMessage}</div>

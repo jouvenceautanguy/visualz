@@ -5,9 +5,10 @@ import HeaderMain from './MainPage/headerMain/headerMain.jsx';
 import SearchBar from './MainPage/SearchBar/SearchBar.jsx';
 import TopCategorie from './MainPage/TopCategorie/TopCategorie.jsx';
 import WordingMain from './MainPage/WordingMain/WordingMain.jsx';
+import './MainPage/mainPage.css'
 function MainPage() {
   return (
-    <div>
+    <div className='mainPageContainer'>
     <HeaderMain />
     <SearchBar />   
     <TopCategorie />

@@ -1,17 +1,62 @@
 .footer {
     display: flex;
     flex-direction: row;
-    align-content: space-between;
-    justify-content: center;
+  
+    justify-content: space-evenly;
     align-items: center;
+    padding: 10vw 0vw 5vw 0vw;
 }
+
 .reseaux {
     display: flex;
 
-    border-right: solid;
-    border-right-color: white;
+    /* border-right: solid; */
+    /* border-right-color: white; */
 }
 
 .reseaux a {
     text-decoration: none;
+    padding: 1vw;
+}
+
+.icons {
+    font-size: 2vw;
+    color: white;
+}
+
+.newsletter {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 1.5vw;
+}
+.barre form {
+    display: flex;
+    align-items: center;
+}
+.barre input {
+    border-radius: 1.5vw;
+    height: 1vw;
+    font-size: 1vw;
+    padding: 1vw 2vw;
+    border: none;
+}
+
+.barre button {
+    margin-left: 2vw;
+    background-color: #FFD600;
+    font-family: 'Poppins';
+    border-radius: 1.5vw;
+    color: black;
+    border: none;
+    height: 1vw;
+    font-size: 1vw;
+    padding: 1vw 2vw;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.barre button:hover {
+    background-color: #F5A623; /* Nouvelle couleur au survol */
+    color: white; /* Nouvelle couleur du texte au survol */
 }

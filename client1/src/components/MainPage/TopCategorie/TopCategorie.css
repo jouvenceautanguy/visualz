@@ -1,21 +1,29 @@
 .top-domaine {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categories {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
-
 }
 
 .square {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Poppins";
     justify-content: center;
     width: 15vw; /* Utilisation de vw (viewport width) pour la largeur */
     height: 15vw; /* Utilisation de vw (viewport width) pour la hauteur */
     border-radius: 10px;
     border: 2px solid #ccc;
     cursor: pointer;
+    background-color: white;
+    border:none;
+    box-shadow: -2px 4px 10px 0px rgba(0,0,0,0.18);
     margin-right: 2vw; /* Utilisation de vw (viewport width) pour la marge */
   }
   
@@ -29,9 +37,10 @@
   }
   
   .square .nom-domaine {
-    font-size: 1.8vw; 
+    font-size: 1.7vw; 
     margin-top: 2vw; /* Utilisation de vw (viewport width) pour la marge */
     font-weight: bold;
+    /* padding: 0vw 1vw; */
   }
   
   .square .total-domaine {
@@ -41,4 +50,10 @@
 
   .square:last-child {
     margin-right: 0; /* Supprimez la marge droite du dernier carré */
+  }
+
+  .wording {
+    font-family: "Poppins";
+    color: white;
+    
   }

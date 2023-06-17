@@ -11,6 +11,18 @@ function SearchBar() {
   const [villeValue, setVilleValue] = useState('');
   const [categorieValue, setCategorieValue] = useState('');
   
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor:'#F5F5F5',
+      border:"none", // Remplacez "red" par la couleur de fond souhaitée
+    }),
+    placeholder: (provided) => ({
+      ...provided,
+      color: '9F9F9F', // Remplacez "white" par la couleur du texte de placeholder souhaitée
+      // Remplacez "blue" par la couleur de fond souhaitée pour le texte de placeholder
+    }),
+  };
   
   useEffect(() => {
     fetch('/pays') // Remplacez "/pays" avec l'URL correcte pour la route de récupération des options
@@ -47,7 +59,7 @@ function SearchBar() {
   return (
     <div className='searchBar'>
       <h3>TROUVEZ LES TALENTS DE L'AUDIOVISUEL POUR TOUT VOS PROJETS</h3>
-      
+      <div className='card'>
         <div className='choix'>
           <label>
             <input
@@ -107,16 +119,21 @@ function SearchBar() {
             value={selectedOption}
             options={options}
             onChange={handleSelect}
+            id="ville-select" 
             isSearchable
             placeholder="Recherchez une ville"
+            styles={customStyles}
        
           />
         </div>
 
       </div>
+      <div className='rechercher'>
       <button className='rechercher' onClick={handleRechercher}>
         RECHERCHER
       </button>
+      </div>
+      </div>
     </div>
   )
 }

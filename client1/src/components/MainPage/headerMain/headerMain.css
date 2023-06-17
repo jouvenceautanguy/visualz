@@ -5,9 +5,30 @@
     align-items: center;
 }
 
-
+.button-menu {
+    border-radius: 1vw;
+    font-family: 'Poppins';
+    border: none;
+    box-shadow: -2px 4px 10px 0px rgba(0,0,0,0.18);
+    background-color:white;
+    color: #7209B7;
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    border: none;
+    font-size: 1em;
+}
+.icon {
+    
+        margin-left:0.5vw; /* Ajoute un espace de 5 pixels à droite de l'icône */
+      
+}
+.iconsLink{
+font-size: 1.5vw;
+    color: white;
+}
 .logo-menu img {
-    width: 5rem;
+    width: 10vw;
   /* height: 100px; */
   object-fit: contain;
     margin-right: 10px;
@@ -31,4 +52,6 @@ ul.header-menu li:last-child {
     align-items: center;
     text-align: center;
     text-decoration: none;
+    color: white;
+    font-family: "Poppins";
 }

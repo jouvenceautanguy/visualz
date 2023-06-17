@@ -2,17 +2,60 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
-
+.searchBar h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5em;
+}
 .choix {
     display: flex;
+    font-family: 'Poppins', sans-serif;
+color: black;
+}
 
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color:#fff!important;
+    border-radius: 1vw;
+    margin-bottom: 5em;
+    color: #9F9F9F;
+    ;
+
+}
+.rechercher{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.rechercher button {
+    background-color:#FFD600;
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    border: none;
+    font-size: 1em;
+    
 }
 
 .group {
     display: flex;
+    padding: 1em 2em;
+    font-family: 'Poppins', sans-serif;
    
 }
+
+#cat-select {
+    font-family: 'Poppins', sans-serif; /* Remplacez "Arial, sans-serif" par la police de votre choix */
+    border: 1px solid #ccc; /* Remplacez "#ccc" par la couleur de la bordure souhaitée */
+ background-color: #F5F5F5;
+ border: none;
+ 
+}
+
 .searchBarVille {
     padding-left: 1em;
+    
 }
