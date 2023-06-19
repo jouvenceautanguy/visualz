@@ -1,24 +1,47 @@
 .talents-container {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+.talents-container h2{
+color: black;
+font-family: "Poppins";
+  }
   .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
+   display: flex;
+   flex-direction: column;
+   width: 60vw;
   }
   
-  .card {
-    border: 1px solid #ccc;
+  .card-talents {
+    border-radius: 1.5vw;
+    margin-bottom: 2vw;
+    border: none;
+    box-shadow: -2px 4px 10px 0px rgba(0,0,0,0.18);
     padding: 10px;
     background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
   }
-  
-  .card p {
-    margin: 0;
+  .card-domaine {
+    font-family: "Poppins";
+
   }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
+  .card-bio {
+    font-family: "Poppins";
+
+  }
+
+  .card-location {
+    color: #9F9F9F;
+  }
+  .image-card {
+    display: flex;
+    align-items: center;
+  }
+  .image-card img{
+    width: 10vw;
+    height: 10vw;
+    opacity: 70%;
   }

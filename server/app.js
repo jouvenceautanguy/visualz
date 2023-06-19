@@ -40,7 +40,8 @@ authRoute(server);
 const visualzRoute = require("./routes/visualzRoute");
 visualzRoute(server);
 
-
+const missionsRoute = require("./routes/missionsRoute");
+missionsRoute(server);
 
 // server.use(express.static('../client1/build'))
 // server.get('/*', (_,res) => {

@@ -1,18 +1,18 @@
 import React from 'react'
-import Talents from './TalentsPage/Talents.jsx';
+import Missions from "./missionsPage/missions.jsx"
 import HeaderMain from './MainPage/headerMain/headerMain.jsx';
 import Footer from './Footer/Footer.jsx';
 import SearchBar from './MainPage/SearchBar/SearchBar.jsx';
-import './pagesStyle/talentsPage.css'
-function TalentsPage() {
+import './pagesStyle/missionsPage.css'
+function missionsPage() {
   return (
-    <div className='talentsPageContainer'>
+    <div className='missionsPageContainer'>
         <HeaderMain />
         <SearchBar />
-        <Talents />
+        <Missions />
         <Footer />
     </div>
   )
 }
 
-export default TalentsPage
+export default missionsPage

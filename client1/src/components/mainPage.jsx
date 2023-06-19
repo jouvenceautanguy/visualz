@@ -5,7 +5,7 @@ import HeaderMain from './MainPage/headerMain/headerMain.jsx';
 import SearchBar from './MainPage/SearchBar/SearchBar.jsx';
 import TopCategorie from './MainPage/TopCategorie/TopCategorie.jsx';
 import WordingMain from './MainPage/WordingMain/WordingMain.jsx';
-import './MainPage/mainPage.css'
+import './pagesStyle/mainPage.css'
 function MainPage() {
   return (
     <div className='mainPageContainer'>

@@ -30,6 +30,10 @@ function TopCategorie() {
 
   const handleClick = domaine => {
     console.log("Domaine cliqué:", domaine);
+        // Construire l'URL avec les valeurs sélectionnées
+        const url = `/visualz?ville=&categorie=${domaine.domaine}`;
+        // Rediriger vers la page de destination
+        window.location.href = url;
     // Ajoutez ici la logique que vous souhaitez exécuter lors du clic sur un domaine
   };
   return (

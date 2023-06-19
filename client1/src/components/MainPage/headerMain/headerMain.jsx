@@ -7,7 +7,7 @@ function HeaderMain() {
     return (
         <div className="headerMain">
 
-            <a href="#" className='logo-menu'><img src={Logo} alt="Mon Logo"></img></a>
+            <a href="/" className='logo-menu'><img src={Logo} alt="Mon Logo"></img></a>
             <a href="#">
                 <button className="button-menu">
                     DÉPOSER UNE ANNONCE 
