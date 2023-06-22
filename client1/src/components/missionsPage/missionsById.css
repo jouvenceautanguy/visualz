@@ -1,0 +1,61 @@
+
+.bodyMissionPage{
+    display: flex;
+    justify-content: center;
+}
+
+
+.main-container {
+    display:flex;
+    flex-direction: column;
+    font-family: "Poppins";
+    padding: 2vw;
+    border: none;
+    border-radius: 2vw;
+    background-color: white;
+    width: 70%;
+    box-shadow: -2px 4px 10px 0px rgba(0,0,0,0.18);
+}
+.main-container h2 {
+font-size: 2vw;
+font-weight: bolder;
+}
+.main-container h3 {
+    font-size: 1.5vw;
+}
+.main-container p {
+
+}
+.image-grosFormat {
+
+}
+.titreLike {
+display: flex;
+flex-direction: row;
+}
+
+.datePubli {
+    opacity: 70%;
+}
+
+.infos1 {
+    display: flex;
+    flex-direction: row;
+}
+.besoin {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
+}
+.lieu {
+    display: flex;
+    flex-direction: column;
+}
+.infos2 {
+    display: flex;
+    flex-direction: column;
+}
+.infos3 {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,7 @@
+.missionsByIdPage-container {
+    /* background-image: url('../../assets/Background.png'), url('../../assets/bg2.png'); */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #F5E7FF;
+    background-position: top left, bottom left;
+}

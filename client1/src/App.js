@@ -7,6 +7,7 @@ import InscriptionPage from './components/InscriptionPage';
 import TalentsPage from './components/TalentsPage';
 import ConnexionPage from './components/connexionPage';
 import MissionsPage from './components/missionsPage';
+import MissionsByIdPage from "./components/missionsByIdPage";
 function App() {
  
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path="/connexion" element={<ConnexionPage />} />
     <Route path="/visualz" element={<TalentsPage />} />
     <Route path="/missions" element={<MissionsPage /> } />
+    <Route path="/missions/:id" element={<MissionsByIdPage /> } />
     </Routes>
       
       
