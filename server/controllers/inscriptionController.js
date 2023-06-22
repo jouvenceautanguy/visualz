@@ -23,10 +23,10 @@ inscriptionController.createUser = (req, res) => {
         console.error(error);
         return res.status(500).json({ message: 'Erreur lors de la création de l\'inscription' });
       }
-
+console.log(result)
       // Générer le token JWT
       const accessToken = jwt.sign(
-        { userId: result._id },
+        { userId: result.insertId},
         process.env.JWT_KEY,
         { expiresIn: '24h' }
       );

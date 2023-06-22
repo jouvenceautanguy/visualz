@@ -28,7 +28,8 @@
   }
   
   .article-preview img {
-    width:15vw; 
+    width:15vw;
+    height: 10vw; 
     border-radius: 1vw;
 
   }

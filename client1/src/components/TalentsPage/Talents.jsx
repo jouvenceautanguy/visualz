@@ -28,15 +28,15 @@ const [paramsData, setParamsData] = useState({});
 
   return (
     <div>
-      <div className='talents-container'>
+      <div className='talents-containerr'>
       <h2>Profils Visualz pour : {paramsData.categorie}</h2>
 
-      <div className="cards-container">
+      <div className="cards-containerr">
         {visualzData.length > 0 ? (
           visualzData.map((visualz) => (
-            <div key={visualz.id_visualz} className="card-talents">
+            <div key={visualz.id_visualz} className="card-talentss">
                <div className='image-card'><img src={Img} alt="Profil Image" /></div>
-               <div className='infos'>
+               <div className='infos-talents'>
               <h2 className='card-nom'>{visualz.nom.toUpperCase() +" "+visualz.prenom.toUpperCase()}</h2>
               <h3 className='card-domaine'>{visualz.domaine.toUpperCase()}</h3>
               <p className='card-bio'>{visualz.bio}</p>

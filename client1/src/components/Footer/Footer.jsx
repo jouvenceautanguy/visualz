@@ -50,9 +50,9 @@ function Footer() {
     <div className='containerFoot'>
       <div className='footer'>
       <div className='reseaux'>
-  <a href='#'><FontAwesomeIcon  className="icons" icon={faInstagram} /></a>
+  <a href='https://instagram.com/visual.zfr?igshid=OGQ5ZDc2ODk2ZA=='><FontAwesomeIcon  className="icons" icon={faInstagram} /></a>
   <a href='#'><FontAwesomeIcon className="icons" icon={faTwitter} /></a>
-  <a href='#'><FontAwesomeIcon className="icons" icon={faFacebookSquare} /></a>
+  <a href='Https://www.facebook.com/profile.php?id=100093427273226'><FontAwesomeIcon className="icons" icon={faFacebookSquare} /></a>
 </div>
 <div className='logo'>
 <a href="#" className='logo-menu'><img src={Logo} alt="Mon Logo"></img></a>

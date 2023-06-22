@@ -5,4 +5,5 @@ module.exports = (server) => {
     // server.post("/createMission", jwtMidlleware.verifyToken, missionsController.createMission);
     // server.get('/missions/:id', jwtMidlleware.verifyToken, missionsController.getMissionsById);
     server.get('/missions/:id', missionsController.getMissionsById);
+    server.post('/missions', jwtMidlleware.verifyToken ,missionsController.createMission);
   };

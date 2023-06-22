@@ -8,6 +8,7 @@ import TalentsPage from './components/TalentsPage';
 import ConnexionPage from './components/connexionPage';
 import MissionsPage from './components/missionsPage';
 import MissionsByIdPage from "./components/missionsByIdPage";
+import CreateAnnoncePage from './components/createAnnoncePage';
 function App() {
  
   return (
@@ -20,6 +21,7 @@ function App() {
     <Route path="/visualz" element={<TalentsPage />} />
     <Route path="/missions" element={<MissionsPage /> } />
     <Route path="/missions/:id" element={<MissionsByIdPage /> } />
+    <Route path="/missions/create" element={<CreateAnnoncePage /> } />
     </Routes>
       
       

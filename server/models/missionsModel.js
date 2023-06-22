@@ -1,6 +1,20 @@
 const db = require("../db");
 const missionsModel = {};
 
+
+missionsModel.create = (titre, objet, duree, debut, lieu, etat, id_client, callback) => {
+  db.query(
+    'INSERT INTO missions (titre, objet, duree, debut, lieu, etat, id_client) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    [titre, objet, duree, debut, lieu, etat, id_client],
+    (error, results) => {
+      if (error) {
+        return callback(error, null);
+      }
+      return callback(null, results);
+    }
+  );
+};
+
 missionsModel.getMissions = (pays, callback) => {
   let query =
     "SELECT missions.*, utilisateurs.nom, utilisateurs.prenom FROM missions JOIN utilisateurs ON missions.id_client = utilisateurs.id_utilisateur";

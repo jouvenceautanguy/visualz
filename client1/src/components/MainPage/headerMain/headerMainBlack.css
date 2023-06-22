@@ -16,7 +16,7 @@
     border-radius: 1em;
     padding: 0.2em 1em;
     border: none;
-    font-size: 1em;
+    font-size: 1vw;
 }
 .icon {
     
@@ -47,6 +47,7 @@ ul.header-menu li:last-child {
     margin-right: 0;
 }
 .menu-linkBlack {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,4 +56,5 @@ ul.header-menu li:last-child {
     color: #7209B7;
     font-weight: bolder;
     font-family: "Poppins";
+    font-size: 1.2vw;
 }

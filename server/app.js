@@ -43,10 +43,10 @@ visualzRoute(server);
 const missionsRoute = require("./routes/missionsRoute");
 missionsRoute(server);
 
-// server.use(express.static('../client1/build'))
-// server.get('/*', (_,res) => {
-//   res.sendFile(path.join(__dirname, '../client1/public/index.html'))
-// })
+server.use(express.static('../client1/build'))
+server.get('/*', (_,res) => {
+  res.sendFile(path.join(__dirname, '../client1/public/index.html'))
+})
 
 server.listen(PORT, () => {
   console.log(`Le serveur est lancé sur le port : ${PORT}`);

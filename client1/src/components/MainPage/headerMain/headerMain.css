@@ -17,6 +17,7 @@
     padding: 0.2em 1em;
     border: none;
     font-size: 1em;
+    cursor: pointer;
 }
 .icon {
     
@@ -54,4 +55,24 @@ ul.header-menu li:last-child {
     text-decoration: none;
     color: white;
     font-family: "Poppins";
+    font-size: 1.2vw;
+}
+
+.account-panel {
+    font-family: "Poppins";
+    font-size: 1vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    background-color: white;
+    border:none;
+    box-shadow: -2px 4px 10px 0px rgba(0,0,0,0.18);
+}
+.account-panel button {
+    background-color:#FFD600;
+    font-weight: bolder;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    border: none;
+    font-size: 1vw;
+    cursor: pointer;
 }

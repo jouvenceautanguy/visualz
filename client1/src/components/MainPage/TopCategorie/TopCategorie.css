@@ -19,7 +19,6 @@
     width: 15vw; /* Utilisation de vw (viewport width) pour la largeur */
     height: 15vw; /* Utilisation de vw (viewport width) pour la hauteur */
     border-radius: 10px;
-    border: 2px solid #ccc;
     cursor: pointer;
     background-color: white;
     border:none;
@@ -52,8 +51,9 @@
     margin-right: 0; /* Supprimez la marge droite du dernier carré */
   }
 
-  .wording {
+  .wordingg {
     font-family: "Poppins";
-    color: white;
-    
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    font-weight: bolder;
   }

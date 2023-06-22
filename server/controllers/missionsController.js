@@ -1,6 +1,34 @@
 const missionsModel = require('../models/missionsModel');
-
+const jwt = require('jsonwebtoken');
 const missionsController = {};
+
+missionsController.createMission = (req, res) => {
+  const { titre, objet, duree, debut, lieu, etat } = req.body;
+  const id_visualz = "";
+  const token = req.headers.authorization;
+  const decodedToken = jwt.verify(token, process.env.JWT_KEY);
+  const id_client = decodedToken.userId;
+  console.log("Valeur de id_client :", id_client);
+
+  missionsModel.create(
+      titre,
+      objet,
+      duree,
+      debut,
+      lieu,
+      etat,
+      id_client,
+      (error, result) => {
+        if (error) {
+          console.error(error);
+          return res.status(500).json({ message: 'Erreur lors de la création de la mission' });
+        }
+
+        return res.status(201).json({ message: 'Mission créée avec succès' });
+      }
+    );
+  };
+
 
 missionsController.getMissions = (req, res) => {
     const { pays } = req.query;
@@ -34,5 +62,7 @@ missionsController.getMissions = (req, res) => {
       }
     });
   };
+
+
 
   module.exports = missionsController;

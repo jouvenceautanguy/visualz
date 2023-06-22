@@ -1,9 +1,9 @@
 
-.connexion {
+.createMission {
     display: flex;
     justify-content: center;
 }
-.main-card-connexion {
+.main-card-mission {
     display:flex;
     flex-direction: column;
     font-family: "Poppins";
@@ -11,17 +11,17 @@
     border: none;
     border-radius: 2vw;
     background-color: white;
-    width: 30%;
+    width: 40%;
     box-shadow: -2px 4px 10px 0px rgba(0,0,0,0.18);
     margin-top: 10vw;
     margin-bottom: 10vw;
 }
-.button-login{
+.button-createMission {
 display: flex;
 justify-content: center;
 margin-top: 4vw;
 }
-.button-login button {
+.button-createMission button {
     background-color:#FFD600;
     font-weight: bolder;
     border-radius: 1em;
@@ -30,30 +30,29 @@ margin-top: 4vw;
     font-size: 1.2vw;
     cursor: pointer;
 }
-.titre-connect {
+.titre-mission {
     display: flex;
     justify-content: center;
 }
-.main-card-connexion h2 {
+.main-card-mission h2 {
     font-size: 2vw;
     font-weight: bolder;
     }
      
-
-.main-card-connexion label {
+.main-card-mission h3 {
         font-size: 1vw;
-
     }
-
-.form input {
-margin-top: 0.5vw;
-margin-bottom: 1vw;
-    border-radius: 2vw;
-    border: none;
-    background-color: #9F9F9F ;
-    opacity: 30%;
-    width: 15vw;
-    height: 1.5vw;
+.main-card-mission p {
+        font-size: 1vw;
+    }
+.champs p {
+    font-family: "Poppins";
+    font-size: 1vw;
+    font-weight: bold;
+}
+.champs input {
+    padding-left: 1vw;
+    
 }
 
 .champs #objet {

@@ -21,16 +21,19 @@
     
 }
 
-.card-talents {
+.cardd-talents {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: "Poppins";
+    height: 10vw;
+    overflow: hidden;
+    cursor: pointer;
 }
 .image-petitFormat {
-   
-    height: 15vw;
-    width: 17vw;/* Utilisation de vw (viewport width) pour la largeur */
+ 
+    height: auto;
+    width: 12vw;/* Utilisation de vw (viewport width) pour la largeur */
     margin-right: 2vw;
     margin-left: 0.5vw;
 }
@@ -41,5 +44,19 @@
    border-radius: 1vw;
 }
 .infos{
-    font-size: 1.5vw;
+    width: 70%;
+    font-size: 1vw;
+    word-wrap: break-word;
 }
+
+.infos p {
+    margin: 5px;
+}
+.coeur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

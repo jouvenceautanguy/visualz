@@ -39,7 +39,7 @@ function TopCategorie() {
   return (
     <div className="top-domaine">
      
-      <h3 className='wording'>TOP CATÉGORIES</h3>
+      <h3 className='wordingg'>TOP CATÉGORIES</h3>
       <div className='categories'>
       {domaines.map(domaine => (
         <div className="square" key={domaine.domaine} onClick={() => handleClick(domaine)}>

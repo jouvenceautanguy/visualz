@@ -70,6 +70,11 @@ const Inscription = () => {
           console.error('Erreur lors de l\'inscription');
           setErrorMessage('Erreur lors de l\'inscription');
         }
+        return response.json(); // Ajoutez cette ligne pour extraire le JSON de la réponse
+      })
+      .then((data) => {
+        const { accessToken } = data; // Extrayez l'accessToken du JSON de la réponse
+        localStorage.setItem('accessToken', accessToken); // Stockez l'accessToken dans localStorage
       })
       .catch((error) => {
         console.error('Erreur lors de l\'envoi des données', error);

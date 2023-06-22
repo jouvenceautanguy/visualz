@@ -8,11 +8,16 @@
     color: white;
     font-family: 'Poppins', sans-serif;
     margin-top: 5em;
+    font-size: 2vw;
 }
 .choix {
     display: flex;
     font-family: 'Poppins', sans-serif;
 color: black;
+font-size: 1.3vw;
+}
+.choix input {
+   width: 1vw;
 }
 
 .card{
@@ -37,15 +42,15 @@ color: black;
     border-radius: 1em;
     padding: 0.2em 1em;
     border: none;
-    font-size: 1em;
+    font-size: 1.5vw;
     
 }
 
 .group {
     display: flex;
-    padding: 1em 2em;
+    padding: 1.5vw 2vw;
     font-family: 'Poppins', sans-serif;
-   
+   margin-bottom: 1vw;
 }
 
 #cat-select {
@@ -53,10 +58,14 @@ color: black;
     border: 1px solid #ccc; /* Remplacez "#ccc" par la couleur de la bordure souhaitée */
  background-color: #F5F5F5;
  border: none;
+ width: 20vw;
+ font-size: 1.2vw;
+ margin-right: 2vw;
  
 }
 
 .searchBarVille {
     padding-left: 1em;
-    
+    width: 20vw;
+    font-size: 1.2vw;
 }

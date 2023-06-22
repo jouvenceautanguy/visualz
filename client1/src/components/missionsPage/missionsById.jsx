@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from 'react-router-dom';
 import "./missionsById.css";
 
 function MissionsById() {
   const [missionsData, setMissionsData] = useState([]);
   const [paramsData, setParamsData] = useState({});
-  const { id } = useParams();
+  const [showMessage, setShowMessage] = useState(false); 
+  const { id} = useParams();
+  const location = useLocation(); // Obtient l'objet location contenant l'URL complète
+
+  const paramUrl = new URLSearchParams(location.search); // Crée un nouvel objet URLSearchParams à partir de la chaîne de requête
+  const encodedPhoto = paramUrl.get('photo'); // Récupère la valeur du paramètre 'photo'
+  const photo = decodeURIComponent(encodedPhoto);
+  console.log(photo)
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,19 +33,24 @@ function MissionsById() {
     fetchData();
   }, []);
 
+  const handleContactClick = () => {
+    // Mettez ici votre logique pour le clic sur le bouton "CONTACTER"
+    setShowMessage(true); // Afficher le message "À venir"
+  };
+
   return (
     <div className="bodyMissionPage">
     <div className="main-container">
       <div className="image-grosFormat">
-         {/* <img src=""></img> */}
+         <img src={photo}></img>
         </div>
         <div className="titreLike">
-          <h2>RECHERCHE CADREUR POUR COURT METRAGE</h2>
+         <h2>{missionsData.titre && missionsData.titre.toUpperCase()}</h2>
           {/* <img src=""></img> */}
         </div>
-        <div className="datePubli">
+        {/* <div className="datePubli">
           <p> Aujourd'hui 12h30</p>
-        </div>
+        </div> */}
         <div className="infos1">
           <div className="besoin">
             <h3>Besoin</h3>
@@ -46,24 +58,22 @@ function MissionsById() {
           </div>
           <div className="lieu">
             <h3>Lieu</h3>
-            <p>Paris</p>
+            <p>{missionsData.lieu}</p>
           </div>
           </div>
           <div className="infos2">
             <h3>Date</h3>
-            <p>12/05/2023</p>
+            <p>{missionsData.debut}</p>
           </div>
           <div className="infos3">
             <h3>Description</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-              ipsa alias maxime beatae! Perspiciatis aspernatur itaque enim
-              culpa labore repudiandae fugit alias praesentium sunt. Ad labore
-              beatae numquam totam debitis?
+            {missionsData.objet}
             </p>
             <div className="button-grosseAnnonce">
-            <button>Contacter</button>
+            <button onClick={handleContactClick}>CONTACTER</button>
             </div>
+            {showMessage && <div className="messagePreventif">À venir</div>}
           </div>
         </div>
         </div>

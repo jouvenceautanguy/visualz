@@ -52,6 +52,11 @@ const Connexion = () => {
           console.error('Erreur lors de la connexion');
           setErrorMessage('Mauvaise combinaison email/mot de passe.');
         }
+        return response.json(); // Ajoutez cette ligne pour extraire le JSON de la réponse
+      })
+      .then((data) => {
+        const { accessToken } = data; // Extrayez l'accessToken du JSON de la réponse
+        localStorage.setItem('accessToken', accessToken); // Stockez l'accessToken dans localStorage
       })
       .catch((error) => {
         console.error('Erreur lors de l\'envoi des données', error);
@@ -62,8 +67,11 @@ const Connexion = () => {
   return (
     <div>
       <div className='connexion'>
-        <div className='main-card'>
+        <div className='main-card-connexion'>
+          <div className='titre-connect'>
           <h2>Se connecter</h2>
+          </div>
+          
           <div className='form'>
             <form onSubmit={handleSubmit}>
               <div className='champs'>
@@ -84,7 +92,10 @@ const Connexion = () => {
                   onChange={(event) => setMotDePasse(event.target.value)}
                 />
               </div>
+              <div className='button-login'>
               <button type="submit">Envoyer</button>
+              </div>
+             
             </form>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
