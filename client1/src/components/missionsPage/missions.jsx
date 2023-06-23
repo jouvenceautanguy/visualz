@@ -24,7 +24,7 @@ function MissionsPage() {
         const params = Object.fromEntries(urlSearchParams.entries());
         console.log("params", params);
         setParamsData(params);
-        const response = await fetch(`/missions?pays=${params.ville || ""}`);
+        const response = await fetch(`api/missions?pays=${params.ville || ""}`);
         const data = await response.json();
         console.log(data);
         setMissionsData(data);

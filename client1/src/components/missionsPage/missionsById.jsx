@@ -21,7 +21,7 @@ function MissionsById() {
         console.log("params", params);
         setParamsData(params);
 
-        const response = await fetch(`/missions/${params}`);
+        const response = await fetch(`api/missions/${params}`);
         const data = await response.json();
         console.log(data);
         setMissionsData(data);

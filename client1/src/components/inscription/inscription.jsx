@@ -53,7 +53,7 @@ const Inscription = () => {
     };
 
     // Envoi des données à l'API en utilisant fetch
-    fetch('/inscription', {
+    fetch('api/inscription', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

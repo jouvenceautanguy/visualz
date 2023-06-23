@@ -13,7 +13,7 @@ const [paramsData, setParamsData] = useState({});
         const params = Object.fromEntries(urlSearchParams.entries());
         console.log('params',params);
         setParamsData(params);
-        const response = await fetch(`/visualz?pays=${params.ville || ''}&domaine=${params.categorie || ''}`);
+        const response = await fetch(`api/visualz?pays=${params.ville || ''}&domaine=${params.categorie || ''}`);
         const data = await response.json();
         console.log(data);
         setVisualzData(data);

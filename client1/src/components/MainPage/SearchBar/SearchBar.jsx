@@ -25,7 +25,7 @@ function SearchBar() {
   };
   
   useEffect(() => {
-    fetch('/pays') // Remplacez "/pays" avec l'URL correcte pour la route de récupération des options
+    fetch('api/pays') // Remplacez "/pays" avec l'URL correcte pour la route de récupération des options
       .then(response => response.json())
       .then(data => {
         setOptions(data);

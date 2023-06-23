@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const missionsController = {};
 
 missionsController.createMission = (req, res) => {
+  console.log('tototototo')
   const { titre, objet, duree, debut, lieu, etat } = req.body;
   const id_visualz = "";
   const token = req.headers.authorization;

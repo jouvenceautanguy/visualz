@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const jwtKey = process.env.JWT_KEY;
 
 exports.verifyToken = (req, res, next) => {
+  console.log('tutututututu')
   let token = req.headers["authorization"];
   if (token !== undefined) {
     jwt.verify(token, jwtKey, (error, payload) => {

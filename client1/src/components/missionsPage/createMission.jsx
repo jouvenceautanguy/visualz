@@ -35,7 +35,7 @@ function CreateMission() {
             return;
         }
         // Envoi des données à l'API en utilisant fetch
-        fetch('/missions', {
+        fetch('/api/missions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

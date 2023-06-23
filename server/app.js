@@ -24,7 +24,6 @@ db.connect((err) => {
   console.log('connected to database');
 });
 
-
 const landingRoute = require("./routes/landingRoute");
 landingRoute(server);
 
@@ -43,10 +42,18 @@ visualzRoute(server);
 const missionsRoute = require("./routes/missionsRoute");
 missionsRoute(server);
 
-server.use(express.static('../client1/build'))
-server.get('/*', (_,res) => {
-  res.sendFile(path.join(__dirname, '../client1/public/index.html'))
-})
+// server.use(express.static('../client1/build'))
+// server.get('/', (_,res) => {
+//   res.sendFile(path.join(__dirname, '../client1/public/index.html'))
+// })
+server.use(express.static('../client1/build'));// let the react app to handle any unknown routes 
+// serve up the index.html if express does'nt recognize the route
+
+server.get('*', (req, res) => {
+  console.log('toto')
+  res.sendFile(path.resolve("..", 'client1', 'build', 'index.html'));
+});
+
 
 server.listen(PORT, () => {
   console.log(`Le serveur est lancé sur le port : ${PORT}`);

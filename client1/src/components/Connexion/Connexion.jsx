@@ -35,7 +35,7 @@ const Connexion = () => {
     };
 
     // Envoi des données à l'API en utilisant fetch
-    fetch('/connexion', {
+    fetch('api/connexion', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

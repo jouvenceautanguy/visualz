@@ -20,7 +20,7 @@ function Footer() {
       }
 
       
-      fetch('/mailing', {
+      fetch('api/mailing', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: userInput })
